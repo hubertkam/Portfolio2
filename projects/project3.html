@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formula Student space-frame chassis · Hubert Kamiński</title>
+  <meta name="description" content="A Formula Student tubular space-frame chassis modelled in SolidWorks, with a simple torsion test in Abaqus.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Formula Student space-frame chassis · Hubert Kamiński">
+  <meta property="og:description" content="A Formula Student tubular space-frame chassis modelled in SolidWorks, with a simple torsion test in Abaqus.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/project.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="../index.html">Hubert Kamiński</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <a class="back-link" href="../index.html#projects">All projects</a>
+
+    <section class="project-sheet sheet" aria-labelledby="project-title">
+      <div class="sheet__frame">
+        <div class="project-sheet__head">
+          <h1 class="project-sheet__title" id="project-title">Formula Student space-frame chassis</h1>
+          <p class="project-sheet__lede">A tubular space-frame chassis for a Formula Student car, modelled in SolidWorks, with a simple torsion test in Abaqus.</p>
+        </div>
+        <figure class="project-sheet__figure">
+          <img src="../assets/images/projects/p3-chassis-iso.jpg" width="1495" height="648" alt="Isometric SolidWorks view of the tubular space-frame chassis">
+        </figure>
+        <dl class="tblock">
+          <div class="tblock__cell"><dt>Type</dt><dd>Personal</dd></div>
+          <div class="tblock__cell"><dt>Year</dt><dd>2025</dd></div>
+          <div class="tblock__cell"><dt>My role</dt><dd>CAD and FEA</dd></div>
+          <div class="tblock__cell"><dt>Tools</dt><dd>SolidWorks, Abaqus</dd></div>
+          <div class="tblock__cell"><dt>Sheet</dt><dd>Project 3 of 4</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <article class="writeup">
+      <h2>Objective</h2>
+      <p>Model and evaluate a Formula Student tubular space-frame chassis using CAD and FEA.</p>
+
+      <h2>Method</h2>
+      <p>I modelled the chassis in SolidWorks and simplified its geometry for analysis, then ran a simple torsion test in Abaqus: one end of the frame was held while a twisting load was applied at the other, and torsional stiffness was calculated from the resulting twist.</p>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p3-chassis-side.jpg"><img src="../assets/images/projects/p3-chassis-side.jpg" width="1265" height="682" loading="lazy" alt="SolidWorks view of the tubular chassis frame with its right reference plane shown"></a>
+  <figcaption><span class="fig__num">Fig. 1</span> The frame with its reference plane (SolidWorks).</figcaption>
+</figure>
+
+      <h2>Results</h2>
+      <p>The test gave a first estimate of the frame’s torsional stiffness and showed where stress concentrated, mainly at the tube joints.</p>
+
+      <h2>Conclusion</h2>
+      <p>As a first-pass design the frame was reasonable. The next steps would be reinforcing the most highly stressed joints and rerunning the test with a finer mesh and load cases based on the Formula Student rules.</p>
+    </article>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="project2.html"><span class="pager__label">Previous project</span><span class="pager__title">Autonomous taxi robot</span></a>
+      <a href="project4.html"><span class="pager__label">Next project</span><span class="pager__title">Differential gearbox motion study</span></a>
+    </nav>
+  </main>
+
+  <dialog class="lightbox" aria-label="Enlarged figure">
+    <img alt="">
+    <div class="lightbox__bar">
+      <p class="lightbox__caption"></p>
+      <button class="lightbox__close" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Hubert Kamiński</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hubert Kamiński · Mechanical engineering portfolio</title>
+  <meta name="description" content="Portfolio of Hubert Kamiński, mechanical engineering student at ATU Sligo: machine design, FEA and prototyping projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hubert Kamiński · Mechanical engineering portfolio">
+  <meta property="og:description" content="Machine design, FEA and prototyping projects by a mechanical engineering student at ATU Sligo.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top">Hubert Kamiński</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: a drawing sheet with a title block -->
+    <section class="hero wrap" aria-labelledby="hero-name">
+      <div class="sheet">
+        <div class="sheet__frame">
+          <div class="hero__title">
+            <h1 class="hero__name" id="hero-name"><span>Hubert</span> <span>Kamiński</span></h1>
+            <p class="hero__intro">Mechanical engineering student at ATU Sligo, working across mechanical design, simulation and system integration.</p>
+          </div>
+
+          <figure class="hero__drawing">
+            <img src="assets/images/projects/p1-side-elevation.png" width="1213" height="458"
+                 alt="Side elevation line drawing of the filament spool re-wind machine: two spools, a spring tensioner and a gear housing">
+            <figcaption>Filament spool re-wind machine, side elevation from the first design iteration. <a href="projects/project1.html">Read the write-up</a></figcaption>
+            <a class="stamp" href="projects/project1.html"><strong>1st place</strong>ATU Engineering Expo 2026</a>
+          </figure>
+
+          <dl class="tblock">
+            <div class="tblock__cell"><dt>Based in</dt><dd>Sligo, Ireland</dd></div>
+            <div class="tblock__cell"><dt>Email</dt><dd><a href="mailto:hubertkaminski2005@gmail.com">hubertkaminski2005@gmail.com</a></dd></div>
+            <div class="tblock__cell"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/hubert-kaminski/" rel="noopener noreferrer" target="_blank">in/hubert-kaminski</a></dd></div>
+            <div class="tblock__cell"><dt>CV</dt><dd><a href="assets/Hubert_Kaminski_CV.pdf" target="_blank">View my CV</a></dd></div>
+            <div class="tblock__cell tblock__photo"><img src="assets/images/profile-square.jpg" width="400" height="400" alt="Hubert Kamiński with motorbikes beside a lake at sunset"></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <h2 class="section__title" id="projects-title">Projects</h2>
+      <ol class="projects" role="list">
+        <li>
+          <article class="project">
+            <figure class="project__figure">
+              <img src="assets/images/projects/p1-final-machine.jpg" width="660" height="429" loading="lazy"
+                   alt="Final SolidWorks assembly of the filament spool re-wind machine with guard and control buttons">
+            </figure>
+            <div>
+              <h3 class="project__title"><a href="projects/project1.html">Filament spool <span class="nowrap">re-wind</span> machine</a></h3>
+              <p class="project__summary">A desktop machine that re-winds cheap third-party filament onto the proprietary spools used by ATU Sligo’s 3D printers. I led the machine design, chose the gear material with a MATLAB bending analysis and verified the gears and spool shaft in ANSYS.</p>
+              <dl class="tblock tblock--boxed">
+                <div class="tblock__cell"><dt>Type</dt><dd>Academic, team of 3</dd></div>
+                <div class="tblock__cell"><dt>Year</dt><dd>2025–2026</dd></div>
+                <div class="tblock__cell"><dt>My role</dt><dd>Machine design, FEA, prototyping</dd></div>
+                <div class="tblock__cell tblock__cell--result"><dt>Result</dt><dd>1st place, ATU Sligo Year 2 Engineering Expo 2026</dd></div>
+              </dl>
+              <a class="more-link" href="projects/project1.html">Read the write-up</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="project">
+            <figure class="project__figure">
+              <img src="assets/images/projects/p2-car-render.jpg" width="1109" height="721" loading="lazy"
+                   alt="SolidWorks render of the four-wheel autonomous taxi robot chassis">
+            </figure>
+            <div>
+              <h3 class="project__title"><a href="projects/project2.html">Autonomous taxi robot</a></h3>
+              <p class="project__summary">As team leader and lead programmer, I led a group building a line-following robot taxi. I wrote the C++ control logic on Arduino, combining tape-sensor path following with LiDAR obstacle detection and avoidance.</p>
+              <dl class="tblock tblock--boxed">
+                <div class="tblock__cell"><dt>Type</dt><dd>Academic, group</dd></div>
+                <div class="tblock__cell"><dt>Year</dt><dd>2024</dd></div>
+                <div class="tblock__cell"><dt>My role</dt><dd>Team leader, lead programmer</dd></div>
+              </dl>
+              <a class="more-link" href="projects/project2.html">Read the write-up</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="project">
+            <figure class="project__figure">
+              <img src="assets/images/projects/p3-chassis-iso.jpg" width="1495" height="648" loading="lazy"
+                   alt="Isometric SolidWorks view of a tubular space-frame chassis">
+            </figure>
+            <div>
+              <h3 class="project__title"><a href="projects/project3.html">Formula Student space-frame chassis</a></h3>
+              <p class="project__summary">I modelled a tubular space-frame chassis for a Formula Student car in SolidWorks and ran a simple torsion test on it in Abaqus to estimate its torsional stiffness.</p>
+              <dl class="tblock tblock--boxed">
+                <div class="tblock__cell"><dt>Type</dt><dd>Personal</dd></div>
+                <div class="tblock__cell"><dt>Year</dt><dd>2025</dd></div>
+                <div class="tblock__cell"><dt>My role</dt><dd>CAD and FEA</dd></div>
+              </dl>
+              <a class="more-link" href="projects/project3.html">Read the write-up</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="project">
+            <figure class="project__figure">
+              <img src="assets/images/projects/p4-differential.jpg" width="880" height="720" loading="lazy"
+                   alt="SolidWorks render of a differential gearbox assembly with drive shafts">
+            </figure>
+            <div>
+              <h3 class="project__title"><a href="projects/project4.html">Differential gearbox motion study</a></h3>
+              <p class="project__summary">I designed and assembled a differential gearbox in SolidWorks and ran a motion study to check how it splits speed between the two output shafts.</p>
+              <dl class="tblock tblock--boxed">
+                <div class="tblock__cell"><dt>Type</dt><dd>Personal</dd></div>
+                <div class="tblock__cell"><dt>Year</dt><dd>2025</dd></div>
+                <div class="tblock__cell"><dt>My role</dt><dd>CAD and motion analysis</dd></div>
+              </dl>
+              <a class="more-link" href="projects/project4.html">Read the write-up</a>
+            </div>
+          </article>
+        </li>
+      </ol>
+
+      <h3 class="subsection-title" id="other-projects">Other projects</h3>
+      <ul class="others" role="list">
+        <li class="others__item">
+          <figure class="others__figure"><a href="assets/images/projects/o-sustainable-spaces.png"><img src="assets/images/projects/o-sustainable-spaces.png" width="856" height="609" loading="lazy" alt="SolidWorks A3 drawing of a circular green-roofed shelter with four entrances, a central pond, section views and a materials table"></a></figure>
+          <h4 class="others__title">Sustainable Spaces shelter</h4>
+          <p class="others__meta">Academic, ATU Sligo, 2026 · SolidWorks</p>
+          <p>A concept design for a sustainable outdoor shelter: a green-roofed structure with four hexagon-shaped entrances, seating inside and a central pond with glass underneath so people can look into it. The roof catches rainwater over 8.22&nbsp;m² and feeds tanks holding 10,480&nbsp;litres, with a drainage system for overflow. I produced the full drawing, including section views and a materials schedule: granite flooring, a low-carbon steel frame and foam seating.</p>
+        </li>
+        <li class="others__item">
+          <figure class="others__figure"><a href="assets/images/projects/o-rc-car.jpg"><img src="assets/images/projects/o-rc-car.jpg" width="637" height="377" loading="lazy" alt="Small 3D-printed RC car with a micro:bit, servo steering, a DC drive motor and battery pack"></a></figure>
+          <h4 class="others__title">Micro:bit RC car</h4>
+          <p class="others__meta">Personal, 2026, ongoing · SolidWorks, 3D printing, micro:bit, Python</p>
+          <p>A small remote-controlled car I designed in SolidWorks and 3D printed, including the chassis, wheels, axle and servo-driven steering linkage. A micro:bit drives the motor and steering servo, and a Python script on a laptop reads the arrow keys and sends drive and steering commands over a serial link.</p>
+        </li>
+        <li class="others__item">
+          <figure class="others__figure"><a href="assets/images/projects/o-multibody.png"><img src="assets/images/projects/o-multibody.png" width="525" height="598" loading="lazy" alt="MATLAB animation frame of a four-link pendulum chain with its traced path and energy readout"></a></figure>
+          <h4 class="others__title">2D multibody dynamics simulator</h4>
+          <p class="others__meta">Personal, 2026 · MATLAB</p>
+          <p>A MATLAB script that assembles rigid bodies and joints into equations of motion, integrates them with ode113 and renders the result as an animation. Joint constraints are held with Baumgarte stabilisation. I tested it on pendulums and linked chains of up to four bodies, where total energy drifted by less than one part in a billion over eight simulated seconds, and extended it to two-body gravity with collision detection.</p>
+        </li>
+        <li class="others__item">
+          <figure class="others__figure"><a href="assets/images/projects/o-microbit-code.png"><img src="assets/images/projects/o-microbit-code.png" width="715" height="535" loading="lazy" alt="MakeCode block program for the micro:bit step counter"></a></figure>
+          <h4 class="others__title">Micro:bit step counter with Python analysis</h4>
+          <p class="others__meta">Leaving Certificate Computer Science, 2024 · micro:bit, Python</p>
+          <p>A micro:bit step counter that logs daily steps, with a Python program that validates the exported CSV data, fits a linear trend to predict future step counts, and scores sleep and mood inputs to give wellbeing feedback with bar and pie charts.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience and education -->
+    <section class="section wrap" id="experience" aria-labelledby="experience-title">
+      <h2 class="section__title" id="experience-title">Experience</h2>
+      <ol class="cv" role="list">
+        <li class="cv__item">
+          <p class="cv__date">Jun 2026 – present</p>
+          <div>
+            <h3 class="cv__role">Engineering summer intern</h3>
+            <p class="cv__org">Abbott, Sligo</p>
+            <ul class="cv__points"><li>Create and update 3D CAD models of mechanical parts and machine components in SolidWorks.</li><li>Produce engineering drawings, machine drafts and technical documentation to support design work.</li><li>Set up and administer Linux (Red Hat) servers supporting camera vision systems.</li><li>3D print prototypes and components for design and production engineering.</li><li>Prepare bills of materials for procurement and develop concept layouts in AutoCAD.</li><li>Carry out inventory counts and Excel-based data analysis supporting cost-saving calculations.</li></ul>
+          </div>
+        </li>
+        <li class="cv__item">
+          <p class="cv__date">May – Aug 2025</p>
+          <div>
+            <h3 class="cv__role">Engineering summer intern</h3>
+            <p class="cv__org">G. Bruss GmbH Dichtungstechnik, Sligo</p>
+            <ul class="cv__points"><li>Set up plastic injection moulding machines and adjusted process parameters to meet specification.</li><li>Inspected and sampled parts against defect criteria and monitored output to catch process deviations.</li><li>Maintained quality and production documentation; performed routine maintenance and minor repairs.</li><li>Worked night shifts in a high-pressure, fast-paced production environment.</li></ul>
+          </div>
+        </li>
+        <li class="cv__item">
+          <p class="cv__date">Dec 2021 – Dec 2025</p>
+          <div>
+            <h3 class="cv__role">Partner (co-owner, 50%)</h3>
+            <p class="cv__org">balinMotors, Sligo</p>
+            <ul class="cv__points"><li>Co-owned a motorbike import and servicing business; carried out mechanical diagnostics, servicing and inspections.</li><li>Carried out electrical work, including wiring.</li><li>Managed import logistics, customs clearance and documentation.</li></ul>
+          </div>
+        </li>
+        <li class="cv__item">
+          <p class="cv__date">Mar 2022</p>
+          <div>
+            <h3 class="cv__role">Mechanical technician intern</h3>
+            <p class="cv__org">Seamus McDaniel Motorcycles Ltd., Sligo</p>
+            <ul class="cv__points"><li>Performed routine servicing, maintenance and diagnostic inspections, and kept accurate service records.</li></ul>
+          </div>
+        </li>
+        <li class="cv__item">
+          <p class="cv__date">Oct 2021</p>
+          <div>
+            <h3 class="cv__role">Maintenance and engineering assistant intern</h3>
+            <p class="cv__org">G. Bruss GmbH Dichtungstechnik, Sligo</p>
+            <ul class="cv__points"><li>Organised and tracked the maintenance parts inventory for production machinery, supporting the engineering team.</li></ul>
+          </div>
+        </li>
+        <li class="cv__item">
+          <p class="cv__date">2021</p>
+          <div>
+            <h3 class="cv__role">Earlier roles</h3>
+            <p class="cv__org">Seasonal shop assistant, Dunnes Stores, Sligo (Dec 2021) · Merchandiser, Rabia Yasin &amp; Sons, Sligo (Jun – Aug 2021)</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="subsection-title" id="education">Education</h3>
+      <ol class="cv" role="list">
+        <li class="cv__item">
+          <p class="cv__date">2024 – present</p>
+          <div>
+            <h4 class="cv__role">BEng (Hons) Mechanical Engineering</h4>
+            <p class="cv__org">Atlantic Technological University (ATU) Sligo</p>
+            <ul class="cv__points"><li>Full-time. Core areas: mechanical design and CAD, structural analysis, thermodynamics and fluid mechanics, engineering mathematics, control and automation.</li></ul>
+          </div>
+        </li>
+        <li class="cv__item">
+          <p class="cv__date">2018 – 2024</p>
+          <div>
+            <h4 class="cv__role">Leaving Certificate</h4>
+            <p class="cv__org">Coola Post Primary School, Riverstown</p>
+            <ul class="cv__points"><li>513 points, including a H1 in Engineering.</li></ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Skills -->
+    <section class="section wrap" id="skills" aria-labelledby="skills-title">
+      <h2 class="section__title" id="skills-title">Skills</h2>
+      <div class="spec-grid">
+        <div>
+          <table class="spec">
+            <caption>CAD</caption>
+            <thead><tr><th scope="col">Software</th><th scope="col">Level</th><th scope="col">Used in</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">SolidWorks</th><td>Proficient</td><td><a href="projects/project1.html">Re-wind machine</a>, <a href="projects/project2.html">Taxi robot</a>, <a href="projects/project3.html">Chassis</a>, <a href="projects/project4.html">Differential</a></td></tr>
+              <tr><th scope="row">Fusion 360</th><td>Intermediate</td><td><a href="projects/project1.html">Re-wind machine</a></td></tr>
+            </tbody>
+          </table>
+          <p class="spec__also">Also: CATIA V5 (proficient), AutoCAD (used at Abbott for concept layouts), Siemens NX (self-taught modelling) and Inventor.</p>
+        </div>
+        <div>
+          <table class="spec">
+            <caption>Simulation and analysis</caption>
+            <thead><tr><th scope="col">Software</th><th scope="col">Level</th><th scope="col">Used in</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">ANSYS</th><td>Proficient</td><td><a href="projects/project1.html">Re-wind machine</a></td></tr>
+              <tr><th scope="row">Abaqus</th><td>Intermediate</td><td><a href="projects/project3.html">Chassis</a></td></tr>
+              <tr><th scope="row">MATLAB / Simulink</th><td>Intermediate</td><td><a href="projects/project1.html">Re-wind machine</a></td></tr>
+            </tbody>
+          </table>
+          <p class="spec__also">Also: SolidWorks motion analysis, NI Multisim (circuit simulation) and FluidSIM (hydraulics and pneumatics).</p>
+        </div>
+      </div>
+
+      <div class="facts facts--skills">
+        <div>
+          <h3>Programming</h3>
+          <ul role="list"><li>Python</li><li>C++ (Arduino)</li><li>HTML and CSS</li></ul>
+        </div>
+        <div>
+          <h3>Computing</h3>
+          <ul role="list"><li>Linux (Red Hat) server setup and administration</li><li>Linux command line</li><li>Microsoft 365</li></ul>
+        </div>
+        <div>
+          <h3>Prototyping and fabrication</h3>
+          <ul role="list"><li>FDM and resin (SLA) 3D printing, on my own printers and daily at work</li><li>Laser cutting</li><li>Iterative prototyping</li><li>Tooling and test-fixture building</li></ul>
+        </div>
+        <div>
+          <h3>Electronics</h3>
+          <ul role="list"><li>Soldering and electrical crimping</li><li>Multimeter diagnostics and fault-finding</li><li>Wiring and circuit troubleshooting</li><li>Arduino sensor and actuator control</li><li>LiDAR sensor integration</li></ul>
+        </div>
+        <div>
+          <h3>Engineering practice</h3>
+          <ul role="list"><li>Technical and manufacturing drawings</li><li>GD&amp;T</li><li>Bills of materials</li><li>Technical documentation</li><li>Defect inspection and quality records</li></ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul role="list"><li>English, native</li><li>Polish, native</li><li>German, A2, working towards B2</li><li>French, A2</li></ul>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Certifications</h3>
+      <div class="facts facts--certs">
+        <div>
+          <h4>LinkedIn Learning</h4>
+          <ul class="cert-list">
+            <li>Introduction to Geometric Dimensioning and Tolerancing</li>
+            <li>SOLIDWORKS Advanced Simulation</li>
+            <li>SOLIDWORKS Design Study and Optimization</li>
+            <li>Learning SOLIDWORKS CAM</li>
+            <li>Learning Industrial Automation</li>
+            <li>Learning MATLAB</li>
+            <li>Python Data Analysis</li>
+            <li>Construction Management: Reading Drawings and Specifications</li>
+            <li>Supply Chain and Operations Careers</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Industry</h4>
+          <ul class="cert-list"><li>International Well Control Forum, Level 1 Programme</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About and testimonials -->
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <h2 class="section__title" id="about-title">About</h2>
+      <div class="prose">
+        <p>I’m a mechanical engineering student based in Ireland, focused on mechanical design, simulation and system integration. I take designs from concept through CAD, analysis and validation, using SolidWorks, CATIA, ANSYS, Abaqus and MATLAB/Simulink. I also 3D print a lot, with FDM and resin printers at home and daily in industry.</p>
+        <p>My projects cover autonomous systems, drivetrain and gear mechanisms, and structural chassis design, with performance checked through material, stress and motion analysis. I’m looking for engineering roles in mechanical design, numerical simulation and analytical validation, especially where mechanical, electrical and control systems meet.</p>
+        <p>Outside engineering I ride motorbikes and motocross, competed in the Ferrari Esports Challenge in 2023, and spend time on CAD modelling, 3D game design and personal engineering projects.</p>
+      </div>
+
+      <h3 class="subsection-title">What supervisors say</h3>
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote><p>“Hubert proved himself to be a highly motivated and capable team member, showing both initiative and reliability in a demanding production environment. He demonstrated an excellent understanding of machine setup and cycle optimization, and reacted well to troubleshooting issues with minimal supervision.”</p></blockquote>
+          <figcaption>Kevin Maguire, Injection Moulding Trainer, G. Bruss GmbH Dichtungstechnik</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote><p>“During his time with Seamus McDaniel Motorcycles Ltd., Hubert demonstrated strong technical competence and consistent attention to detail. He delivered reliable, high-quality mechanical work, took initiative when diagnosing faults, and handled complex mechanical issues with minimal supervision. He worked effectively both independently and as part of a workshop team.”</p></blockquote>
+          <figcaption>Seamus McDaniel Motorcycles Ltd.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section wrap" id="contact" aria-labelledby="contact-title">
+      <div class="contact">
+        <div>
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p>The quickest way to reach me is email.</p>
+          <a class="contact__email" href="mailto:hubertkaminski2005@gmail.com">hubertkaminski2005@gmail.com</a>
+          <ul class="link-list" role="list">
+            <li><a href="https://www.linkedin.com/in/hubert-kaminski/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/hubertkam" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+            <li><a href="assets/Hubert_Kaminski_CV.pdf" target="_blank">CV</a></li>
+          </ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="form__row form__row--pair">
+            <div class="form__row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form__row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required>
+          </div>
+          <div class="form__row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button class="button" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Hubert Kamiński</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

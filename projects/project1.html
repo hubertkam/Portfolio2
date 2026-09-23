@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filament spool re-wind machine · Hubert Kamiński</title>
+  <meta name="description" content="A desktop machine that re-winds low-cost third-party filament onto proprietary printer spools. MATLAB gear material selection, ANSYS verification, 1st place at the ATU Sligo Year 2 Engineering Expo 2026.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Filament spool re-wind machine · Hubert Kamiński">
+  <meta property="og:description" content="A desktop machine that re-winds low-cost third-party filament onto proprietary printer spools. MATLAB gear material selection, ANSYS verification, 1st place at the ATU Sligo Year 2 Engineering Expo 2026.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/project.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="../index.html">Hubert Kamiński</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <a class="back-link" href="../index.html#projects">All projects</a>
+
+    <section class="project-sheet sheet" aria-labelledby="project-title">
+      <div class="sheet__frame">
+        <div class="project-sheet__head">
+          <h1 class="project-sheet__title" id="project-title">Filament spool <span class="nowrap">re-wind</span> machine</h1>
+          <p class="project-sheet__lede">A desktop machine that re-winds low-cost third-party 3D-printer filament onto the proprietary spools used by ATU Sligo’s Sindoh printers. Built by a team of three over two semesters.</p>
+        </div>
+        <figure class="project-sheet__figure">
+          <img src="../assets/images/projects/p1-final-machine.jpg" width="660" height="429" alt="Final SolidWorks assembly of the machine with guard, electrical enclosure and control buttons">
+        </figure>
+        <dl class="tblock">
+          <div class="tblock__cell"><dt>Type</dt><dd>Academic, team of 3</dd></div>
+          <div class="tblock__cell"><dt>Year</dt><dd>2025–2026</dd></div>
+          <div class="tblock__cell"><dt>My role</dt><dd>Machine design, FEA, prototyping</dd></div>
+          <div class="tblock__cell"><dt>Tools</dt><dd>SolidWorks, Fusion 360, MATLAB, ANSYS</dd></div>
+          <div class="tblock__cell tblock__cell--result"><dt>Result</dt><dd>1st place, ATU Sligo Year 2 Engineering Expo 2026</dd></div>
+          <div class="tblock__cell"><dt>Sheet</dt><dd>Project 1 of 4</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <article class="writeup">
+      <h2>The problem</h2>
+      <p>ATU Sligo’s Sindoh 3D printers only accept proprietary filament spools, which cost around €25 per kg. Comparable third-party filament costs about €10 per kg but comes on spools the printers can’t take. The brief asked for a desktop machine that transfers filament from large third-party spools onto Sindoh spools, using a single motor for both spool rotation and the filament guide, with cantilevered spool shafts and tool-less spool changes.</p>
+
+      <h2>Design decisions</h2>
+      <p>To lay filament evenly, a guide has to move back and forth across the spool as it turns. We compared three ways of getting that motion from the motor: a lead screw with a return spring, a crank and slider, and a segmented gear driving a rack. The segmented gear won on compactness, positive drive and ease of laser cutting. For tension, a spring-loaded roller tensioner beat a dancer arm because it needs no sensors or controller.</p>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-side-elevation.png"><img src="../assets/images/projects/p1-side-elevation.png" width="1213" height="458" loading="lazy" alt="Side elevation line drawing of the machine showing both spools, the spring tensioner and the gear train"></a>
+  <figcaption><span class="fig__num">Fig. 1</span> Side elevation from the first design iteration: spools, spring tensioner and gear train.</figcaption>
+</figure>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-cad-internal.jpg"><img src="../assets/images/projects/p1-cad-internal.jpg" width="1075" height="533" loading="lazy" alt="CAD view of the worm drive and reciprocating guide inside the gear housing, with the motor on the right"></a>
+  <figcaption><span class="fig__num">Fig. 2</span> Worm drive and reciprocating guide inside the gear housing, motor on the right.</figcaption>
+</figure>
+
+      <h2>Gear material: MATLAB</h2>
+      <p>I wrote a MATLAB script based on the Lewis bending equation to compare laser-cut PMMA (acrylic) with PLA for the load-bearing gears, using a 150 mm pitch diameter, 2 mm module, 30 mm face width and a combined load factor of 1.79. With the geometry identical for both, the comparison comes down to tensile strength (72 MPa for PMMA, 60 MPa for PLA): PMMA reached tooth-root bending failure at 63.4 N·m against 52.9 N·m for PLA, about 20% more torque, so the gears were laser cut from PMMA. The script uses static strength only; fatigue, contact wear and acrylic’s brittleness under impact were not modelled.</p>
+<div class="fig-pair">
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-matlab-torque.jpg"><img src="../assets/images/projects/p1-matlab-torque.jpg" width="560" height="420" loading="lazy" alt="Bar chart: maximum torque before tooth-root bending failure, 63.4 N·m for PMMA and 52.9 N·m for PLA"></a>
+  <figcaption><span class="fig__num">Fig. 3</span> Torque at tooth-root bending failure, PMMA vs PLA.</figcaption>
+</figure>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-matlab-bending.jpg"><img src="../assets/images/projects/p1-matlab-bending.jpg" width="560" height="420" loading="lazy" alt="Line chart of tooth-root bending stress against applied torque, with PMMA and PLA strength limits"></a>
+  <figcaption><span class="fig__num">Fig. 4</span> Bending stress against applied torque, with each material’s tensile strength.</figcaption>
+</figure>
+</div>
+
+      <h2>Structural checks: ANSYS</h2>
+      <p>The worm gear, the segmented gear and rail, and the cantilevered spool shaft were checked with ANSYS static structural analyses. With an estimated 1 N·m motor torque, both gear analyses returned safety factors above 15, the highest value ANSYS reports. For the spool shaft, a 700 N load at the tip stood in for someone leaning on the machine: ANSYS gave a peak von Mises stress of 7.15 MPa against 6.50 MPa from my hand calculation, a 10% difference. In PLA that meant a minimum safety factor of 3.79, so the shaft was changed to structural steel, which reduced deflection and raised the safety factor to 38.5.</p>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-ansys-gear.jpg"><img src="../assets/images/projects/p1-ansys-gear.jpg" width="898" height="643" loading="lazy" alt="ANSYS equivalent stress plot of the worm and gear, mostly blue with the maximum at the mesh point"></a>
+  <figcaption><span class="fig__num">Fig. 5</span> Von Mises stress in the worm and gear under an estimated 1 N·m motor torque (ANSYS).</figcaption>
+</figure>
+
+      <h2>Prototyping</h2>
+      <p>Parts were 3D printed and laser cut at the ATU makerspace, then assembled and revised over several prototypes. Early tests showed the segmented gear catching on the rail as motor load pushed them out of alignment. New tolerances, redesigned worm and helical gears and an added bearing holder reduced this, but the first working prototype still occasionally skipped teeth, which is the first thing I would fix in another iteration.</p>
+<div class="fig-pair">
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-mechanism-proto.jpg"><img src="../assets/images/projects/p1-mechanism-proto.jpg" width="1125" height="844" loading="lazy" alt="Black 3D-printed and laser-cut reciprocating mechanism prototype on a desk"></a>
+  <figcaption><span class="fig__num">Fig. 6</span> First prototype of the reciprocating mechanism.</figcaption>
+</figure>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-tension-proto.jpg"><img src="../assets/images/projects/p1-tension-proto.jpg" width="1125" height="844" loading="lazy" alt="Black spring-loaded tension control prototype with a printed spring"></a>
+  <figcaption><span class="fig__num">Fig. 7</span> Second prototype of the spring-loaded tension control.</figcaption>
+</figure>
+</div>
+
+      <h2>Safety and manufacture</h2>
+      <p>Moving parts sit behind laser-cut guards and the machine has an emergency stop. Flat parts were laser cut to save material and print time, the assembly is bolted rather than glued so worn bearings, springs and gears can be replaced individually, and printed parts use recyclable PLA or PETG.</p>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-safety-guard.jpg"><img src="../assets/images/projects/p1-safety-guard.jpg" width="761" height="391" loading="lazy" alt="CAD detail of the guard fitted over the gear mechanism"></a>
+  <figcaption><span class="fig__num">Fig. 8</span> Guard over the gear mechanism.</figcaption>
+</figure>
+
+      <h2>Team and outcome</h2>
+      <p>I led the machine design, FEA and prototyping. Sip Beckmann built the Arduino control system and Julian Kaminski designed the height-adjustable workbench. The project won 1st place at the ATU Sligo Year 2 Engineering Expo in 2026.</p>
+<div class="fig-pair">
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-electronics.jpg"><img src="../assets/images/projects/p1-electronics.jpg" width="1125" height="633" loading="lazy" alt="Arduino board on a breadboard with LEDs, a potentiometer and wiring"></a>
+  <figcaption><span class="fig__num">Fig. 9</span> Control electronics by Sip Beckmann: enable button, speed potentiometer, ultrasonic sensor and MOSFET motor driver.</figcaption>
+</figure>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p1-workbench.jpg"><img src="../assets/images/projects/p1-workbench.jpg" width="1024" height="935" loading="lazy" alt="CAD render of the machine on an adjustable workbench with spool storage and an electrical enclosure"></a>
+  <figcaption><span class="fig__num">Fig. 10</span> Adjustable workbench by Julian Kaminski, with spool storage and the electrical enclosure.</figcaption>
+</figure>
+</div>
+    </article>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="project4.html"><span class="pager__label">Previous project</span><span class="pager__title">Differential gearbox motion study</span></a>
+      <a href="project2.html"><span class="pager__label">Next project</span><span class="pager__title">Autonomous taxi robot</span></a>
+    </nav>
+  </main>
+
+  <dialog class="lightbox" aria-label="Enlarged figure">
+    <img alt="">
+    <div class="lightbox__bar">
+      <p class="lightbox__caption"></p>
+      <button class="lightbox__close" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Hubert Kamiński</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>

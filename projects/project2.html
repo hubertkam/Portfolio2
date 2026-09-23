@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autonomous taxi robot · Hubert Kamiński</title>
+  <meta name="description" content="A line-following autonomous taxi robot built on Arduino, with junction detection, destination selection and LiDAR obstacle avoidance written in C++.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Autonomous taxi robot · Hubert Kamiński">
+  <meta property="og:description" content="A line-following autonomous taxi robot built on Arduino, with junction detection, destination selection and LiDAR obstacle avoidance written in C++.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/project.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="../index.html">Hubert Kamiński</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <a class="back-link" href="../index.html#projects">All projects</a>
+
+    <section class="project-sheet sheet" aria-labelledby="project-title">
+      <div class="sheet__frame">
+        <div class="project-sheet__head">
+          <h1 class="project-sheet__title" id="project-title">Autonomous taxi robot</h1>
+          <p class="project-sheet__lede">A line-following robot taxi that navigates a taped course, detects junctions and drives to a selected destination. I led the team and wrote the control software.</p>
+        </div>
+        <figure class="project-sheet__figure">
+          <img src="../assets/images/projects/p2-car-render.jpg" width="1109" height="721" alt="SolidWorks render of the four-wheel autonomous taxi robot">
+        </figure>
+        <dl class="tblock">
+          <div class="tblock__cell"><dt>Type</dt><dd>Academic, group</dd></div>
+          <div class="tblock__cell"><dt>Year</dt><dd>2024</dd></div>
+          <div class="tblock__cell"><dt>My role</dt><dd>Team leader, lead programmer</dd></div>
+          <div class="tblock__cell"><dt>Tools</dt><dd>Arduino Uno, C++, SolidWorks</dd></div>
+          <div class="tblock__cell"><dt>Sheet</dt><dd>Project 2 of 4</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <article class="writeup">
+      <h2>Objective</h2>
+      <p>Design and build an autonomous line-following taxi prototype that can drive to one of several destinations.</p>
+
+      <h2>Method</h2>
+      <p>A four-wheel-drive platform is controlled by an Arduino Uno. Line sensors track the black-tape path, junction detection and destination selection are written in C++, and LiDAR input is used to detect and avoid obstacles. The project ran on weekly milestones.</p>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p2-motor-layout.png"><img src="../assets/images/projects/p2-motor-layout.png" width="643" height="509" loading="lazy" alt="Drawing of the robot base showing three line sensors at the front and four drive motors at the corners"></a>
+  <figcaption><span class="fig__num">Fig. 1</span> Motor and sensor layout: right, left and middle line sensors and four drive motors.</figcaption>
+</figure>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p2-prototype.jpg"><img src="../assets/images/projects/p2-prototype.jpg" width="1200" height="900" loading="lazy" alt="Photo of the finished four-wheel robot with yellow wheels and Arduino wiring on its top deck"></a>
+  <figcaption><span class="fig__num">Fig. 2</span> The finished prototype.</figcaption>
+</figure>
+<div class="fig-pair">
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p2-sensor-housing.jpg"><img src="../assets/images/projects/p2-sensor-housing.jpg" width="431" height="248" loading="lazy" alt="Blue line-sensor board fitted into a black 3D-printed housing at the front of the robot"></a>
+  <figcaption><span class="fig__num">Fig. 3</span> Line-sensor array in the 3D-printed front housing.</figcaption>
+</figure>
+<figure class="fig">
+  <a class="fig__frame" href="../assets/images/projects/p2-sensor-wiring.jpg"><img src="../assets/images/projects/p2-sensor-wiring.jpg" width="446" height="226" loading="lazy" alt="Front housing on the robot chassis with sensor wiring running back to the controller"></a>
+  <figcaption><span class="fig__num">Fig. 4</span> Sensor housing mounted on the chassis, with wiring to the controller.</figcaption>
+</figure>
+</div>
+
+      <h2>Results</h2>
+      <p>The robot tracked the line across the full course, detected junctions reliably and reached the destination selected with its hardware inputs.</p>
+
+      <h2>Conclusion</h2>
+      <p>The robot navigated the course repeatably and the control logic worked as intended under test conditions.</p>
+    </article>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="project1.html"><span class="pager__label">Previous project</span><span class="pager__title">Filament spool <span class="nowrap">re-wind</span> machine</span></a>
+      <a href="project3.html"><span class="pager__label">Next project</span><span class="pager__title">Formula Student space-frame chassis</span></a>
+    </nav>
+  </main>
+
+  <dialog class="lightbox" aria-label="Enlarged figure">
+    <img alt="">
+    <div class="lightbox__bar">
+      <p class="lightbox__caption"></p>
+      <button class="lightbox__close" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Hubert Kamiński</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>

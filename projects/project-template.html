@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Template for a new project page. Copy to projects/projectN.html, replace the placeholders,
+     update the previous/next links on the neighbouring pages, and add a card to index.html. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Project title · Hubert Kamiński</title>
+  <meta name="description" content="One-sentence description for search results and link previews.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Project title · Hubert Kamiński">
+  <meta property="og:description" content="One-sentence description for search results and link previews.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/project.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="../index.html">Hubert Kamiński</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <a class="back-link" href="../index.html#projects">All projects</a>
+
+    <!-- 1. Title sheet: title, one-sentence summary, lead image, title block -->
+    <section class="project-sheet sheet" aria-labelledby="project-title">
+      <div class="sheet__frame">
+        <div class="project-sheet__head">
+          <h1 class="project-sheet__title" id="project-title">Project title</h1>
+          <p class="project-sheet__lede">One or two sentences: what it is and what you did.</p>
+        </div>
+        <figure class="project-sheet__figure">
+          <!-- Always set width/height to the image's real pixel size -->
+          <img src="../assets/images/projects/pN-lead.jpg" width="1200" height="800" alt="Describe what the image shows">
+        </figure>
+        <dl class="tblock">
+          <div class="tblock__cell"><dt>Type</dt><dd>Academic / Personal</dd></div>
+          <div class="tblock__cell"><dt>Year</dt><dd>2026</dd></div>
+          <div class="tblock__cell"><dt>My role</dt><dd>Your role</dd></div>
+          <div class="tblock__cell"><dt>Tools</dt><dd>SolidWorks, ANSYS</dd></div>
+          <!-- Optional: an award or headline result, shown in red -->
+          <div class="tblock__cell tblock__cell--result"><dt>Result</dt><dd>Award or key outcome</dd></div>
+          <div class="tblock__cell"><dt>Sheet</dt><dd>Project N of N</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 2. Write-up. Keep sections short; lead with numbers where you have them. -->
+    <article class="writeup">
+      <h2>Objective</h2>
+      <p>What problem were you solving, and under what constraints?</p>
+
+      <h2>Method</h2>
+      <p>How you approached it.</p>
+
+      <!-- Single figure. The link opens an enlarged view. -->
+      <figure class="fig">
+        <a class="fig__frame" href="../assets/images/projects/pN-figure.jpg"><img src="../assets/images/projects/pN-figure.jpg" width="1200" height="800" loading="lazy" alt="Describe the figure"></a>
+        <figcaption><span class="fig__num">Fig. 1</span> Caption saying what the figure shows.</figcaption>
+      </figure>
+
+      <!-- Two figures side by side -->
+      <div class="fig-pair">
+        <figure class="fig">
+          <a class="fig__frame" href="../assets/images/projects/pN-a.jpg"><img src="../assets/images/projects/pN-a.jpg" width="800" height="600" loading="lazy" alt=""></a>
+          <figcaption><span class="fig__num">Fig. 2</span> Caption.</figcaption>
+        </figure>
+        <figure class="fig">
+          <a class="fig__frame" href="../assets/images/projects/pN-b.jpg"><img src="../assets/images/projects/pN-b.jpg" width="800" height="600" loading="lazy" alt=""></a>
+          <figcaption><span class="fig__num">Fig. 3</span> Caption.</figcaption>
+        </figure>
+      </div>
+
+      <h2>Results</h2>
+      <p>Measured or simulated numbers, compared with targets or hand calculations.</p>
+
+      <h2>Conclusion</h2>
+      <p>What worked, what didn't, and what you'd change next.</p>
+    </article>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="projectN-1.html"><span class="pager__label">Previous project</span><span class="pager__title">Previous project title</span></a>
+      <a href="projectN+1.html"><span class="pager__label">Next project</span><span class="pager__title">Next project title</span></a>
+    </nav>
+  </main>
+
+  <dialog class="lightbox" aria-label="Enlarged figure">
+    <img alt="">
+    <div class="lightbox__bar">
+      <p class="lightbox__caption"></p>
+      <button class="lightbox__close" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Hubert Kamiński</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>
